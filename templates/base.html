@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Games</title>
+</head>
+<body>
+    <header>
+        <h1>Games</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('pfc.game_pfc') }}" class="{% if request.endpoint == 'pfc.game_pfc' %}active{% endif %}">Pierre feuille ciseaux</a></li>
+                <li><a href="{{ url_for('nombre_dor.game_nombre_dor') }}" class="{% if request.endpoint == 'nombre_dor.game_nombre_dor' %}active{% endif %}">Nombre d'or</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Games. All rights reserved -nicolas tchenio.</p>
+    </footer>
+    
+</body>
+</html>

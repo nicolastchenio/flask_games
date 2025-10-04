@@ -1,0 +1,119 @@
+/* ==========================
+   Reset et base
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================
+   Header et navigation
+========================== */
+header {
+    background: #1e1e2f;
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+}
+
+/* effet hover */
+nav a:hover {
+    color: #ffcb05;
+    border-bottom: 2px solid #ffcb05;
+}
+
+/* effet actif (page actuelle) */
+nav a.active {
+    color: #ffcb05;
+    border-bottom: 2px solid #ffcb05;
+}
+
+/* ==========================
+   Contenu principal
+========================== */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+    color: #1e1e2f;
+    text-align: center;
+}
+
+main p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+}
